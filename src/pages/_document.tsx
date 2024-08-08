@@ -43,7 +43,7 @@ export default function Document() {
             `}
           </Script>
 
-          <Script data-cfasync="false" strategy="afterInteractive" rc="//cheesydrinks.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
+          <Script data-cfasync="false" strategy="afterInteractive" src="//cheesydrinks.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
 
       </body>
     </Html>
