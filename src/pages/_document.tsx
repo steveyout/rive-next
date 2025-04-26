@@ -5,16 +5,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
-        <Main />
-        <NextScript />
+        <body>
+        <Main/>
+        <NextScript/>
         {/* Google tag (gtag.js)*/}
-          <Script
+        <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-MQN0EPT9M8"
             strategy="afterInteractive"
-          />
-     <Script id="google-analytics" strategy="afterInteractive">
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
             {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -22,8 +22,8 @@ export default function Document() {
 
             gtag('config', 'G-MQN0EPT9M8');
             `}
-          </Script>
-	      {/*
+        </Script>
+        {/*
          <Script data-cfasync="false" strategy="afterInteractive">
             {`
 
@@ -31,17 +31,17 @@ export default function Document() {
             `}
           </Script>
 	  */}
-	      <Script async strategy="afterInteractive" src="//acscdn.com/script/aclib.js"></Script>
-           <Script data-cfasync="false" strategy="lazyOnload">
+        <Script async strategy="afterInteractive" src="//acscdn.com/script/aclib.js"></Script>
+        <Script data-cfasync="false" strategy="lazyOnload">
             {`
             aclib.runPop({
         zoneId: '9033646',
      });
              `}
-          </Script>
+        </Script>
 
 
-         <Script data-cfasync="false" strategy="afterInteractive">
+        <Script data-cfasync="false" strategy="afterInteractive">
             {`
            atOptions = {
 		'key' : '426ecea5ff615774e8e3ae2bf2fcdfde',
@@ -51,11 +51,23 @@ export default function Document() {
 		'params' : {}
 	};
             `}
-          </Script>
+        </Script>
 
-          <Script data-cfasync="false" strategy="afterInteractive" src="//cheesydrinks.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
-
-      </body>
+        <Script data-cfasync="false" strategy="afterInteractive"
+                src="//affectionparson.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
+        <Script type="text/javascript">
+            {`
+            atOptions = {
+            'key' : 'e65f710d81006af8b011eb6800cc3dfb',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+        `}
+        </Script>
+        <Script type="text/javascript" src="//affectionparson.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
+        </body>
     </Html>
   );
 }
