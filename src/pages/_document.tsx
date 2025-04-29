@@ -34,9 +34,9 @@ export default function Document() {
         <Script async strategy="afterInteractive" src="//acscdn.com/script/aclib.js"></Script>
         <Script data-cfasync="false" strategy="lazyOnload">
             {`
-            aclib.runPop({
-        zoneId: '9033646',
-     });
+             aclib.runAutoTag({
+        zoneId: 's3xgwl2iyw',
+    });
              `}
         </Script>
 
