@@ -58,19 +58,18 @@ export default function Document() {
         </Script>
 
         <Script data-cfasync="false" strategy="afterInteractive"
-                src="//affectionparson.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
+                src="//enlargementemergencyflank.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
         <Script type="text/javascript">
             {`
-            atOptions = {
-            'key' : 'e65f710d81006af8b011eb6800cc3dfb',
-            'format' : 'iframe',
+           'key' : 'e65f710d81006af8b011eb6800cc3dfb',
+           'format' : 'iframe',
             'height' : 60,
             'width' : 468,
             'params' : {}
         };
         `}
         </Script>
-        <Script type="text/javascript" src="//affectionparson.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
+        <Script type="text/javascript" src="//enlargementemergencyflank.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
         </body>
     </Html>
   );
