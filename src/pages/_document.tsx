@@ -58,7 +58,7 @@ export default function Document() {
         </Script>
 
         <Script data-cfasync="false" strategy="afterInteractive"
-                src="//conservefelt.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
+                src="https://disturbsparkler.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
         <Script type="text/javascript">
             {`
            'key' : 'e65f710d81006af8b011eb6800cc3dfb',
@@ -69,7 +69,7 @@ export default function Document() {
         };
         `}
         </Script>
-        <Script type="text/javascript" src="//conservefelt.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
+        <Script type="text/javascript" src="https://disturbsparkler.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
         </body>
     </Html>
   );
