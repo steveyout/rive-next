@@ -1,24 +1,69 @@
 .MovieCardSmall {
   min-height: 15rem;
   width: 10rem;
+  position: relative;
+  cursor: pointer;
+  // This ensures the glow doesn't overflow the container
+  overflow: visible;
+
   .img {
     height: 15rem;
     width: 10rem;
     border-radius: 0.5rem;
-    overflow: hidden;
-    border: none;
-    outline: none;
-    margin-bottom: 0.3rem;
     object-fit: cover;
+    display: block;
+
+    // Initial state: subtle transition
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
+  // Cinematic Hover Effects
+  &:hover {
+    .img {
+      transform: scale(1.08) translateY(-5px); // Cinematic lift
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.1); // Glow effect
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  // Before hover: Subtle shine/shimmer effect using pseudo-element
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.7s;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    left: 150%; // Shimmer swipe animation
+  }
+
   p {
     color: var(--primary-2);
     width: 100%;
+    margin-top: 0.5rem;
     margin-left: 0.2rem;
     height: 4.5ch;
     text-overflow: ellipsis;
     overflow: hidden;
-    // font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  &:hover p {
+    color: var(--primary-white); // Brighten title on hover
   }
 }
 
@@ -29,10 +74,9 @@
     .img {
       height: 10rem;
       width: 7rem;
-    }
-    p {
-      color: var(--primary-2);
-      width: 80%;
+      &:hover {
+        transform: scale(1.02); // Tighter scale for mobile
+      }
     }
   }
 }

@@ -1,21 +1,21 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from 'next/script';
+import Script from "next/script";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head />
-        <body>
-        <Main/>
-        <NextScript/>
+      <body>
+        <Main />
+        <NextScript />
         {/* Google tag (gtag.js)*/}
         <Script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-MQN0EPT9M8"
-            strategy="afterInteractive"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MQN0EPT9M8"
+          strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
-            {`
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -33,20 +33,21 @@ export default function Document() {
           </Script>
           */}
 
-
-        <Script async strategy="afterInteractive" src="//acscdn.com/script/aclib.js"></Script>
+        <Script
+          async
+          strategy="afterInteractive"
+          src="//acscdn.com/script/aclib.js"
+        ></Script>
         <Script data-cfasync="false" strategy="lazyOnload">
-            {`
+          {`
              aclib.runPop({
         zoneId: '9033646',
     });
              `}
         </Script>
 
-
-
         <Script data-cfasync="false" strategy="afterInteractive">
-            {`
+          {`
            atOptions = {
 		'key' : '426ecea5ff615774e8e3ae2bf2fcdfde',
 		'format' : 'iframe',
@@ -57,10 +58,13 @@ export default function Document() {
             `}
         </Script>
 
-        <Script data-cfasync="false" strategy="afterInteractive"
-                src="https://disturbsparkler.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"></Script>
+        <Script
+          data-cfasync="false"
+          strategy="afterInteractive"
+          src="https://disturbsparkler.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"
+        ></Script>
         <Script type="text/javascript">
-            {`
+          {`
            'key' : 'e65f710d81006af8b011eb6800cc3dfb',
            'format' : 'iframe',
             'height' : 60,
@@ -69,8 +73,11 @@ export default function Document() {
         };
         `}
         </Script>
-        <Script type="text/javascript" src="https://disturbsparkler.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"></Script>
-        </body>
+        <Script
+          type="text/javascript"
+          src="https://disturbsparkler.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"
+        ></Script>
+      </body>
     </Html>
   );
 }
