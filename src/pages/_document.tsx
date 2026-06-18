@@ -61,7 +61,7 @@ export default function Document() {
         <Script
           data-cfasync="false"
           strategy="afterInteractive"
-          src="https://disturbsparkler.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"
+          src="https://directoryeditorweep.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"
         ></Script>
         <Script type="text/javascript">
           {`
@@ -75,7 +75,7 @@ export default function Document() {
         </Script>
         <Script
           type="text/javascript"
-          src="https://disturbsparkler.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"
+          src="https://directoryeditorweep.com/e65f710d81006af8b011eb6800cc3dfb/invoke.js"
         ></Script>
       </body>
     </Html>
