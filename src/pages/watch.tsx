@@ -11,6 +11,7 @@ import {
 } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import styles from "@/styles/Watch.module.scss";
+import BLOCKED_URLS from "@/config/dmca-blocked.json";
 import { setContinueWatching } from "@/Utils/continueWatching";
 import { toast } from "sonner";
 import { IoReturnDownBack } from "react-icons/io5";
@@ -51,6 +52,43 @@ const Watch = () => {
   const [nonEmbedVideoProviders, setNonEmbedVideoProviders] = useState([]);
   const [nonEmbedSourcesNotFound, setNonEmbedSourcesNotFound] =
     useState<any>(false);
+
+  ////dmca
+  // Check if current parameters match any entry in the external JSON config
+  const isBlocked = BLOCKED_URLS.some(
+    (item) =>
+      item.type === type &&
+      String(item.id) === String(id) &&
+      String(item.season) === String(season) &&
+      String(item.episode) === String(episode),
+  );
+
+  if (isBlocked) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundColor: "#121212",
+          color: "#ffffff",
+          fontFamily: "sans-serif",
+          textAlign: "center",
+          padding: "20px",
+        }}
+      >
+        <h1 style={{ fontSize: "2rem", marginBottom: "10px" }}>
+          410 - Content Removed
+        </h1>
+        <p style={{ color: "#a0a0a0" }}>
+          This content has been permanently removed pursuant to a DMCA takedown
+          request.
+        </p>
+      </div>
+    );
+  }
 
   const nextBtn: any = useRef(null);
   const backBtn: any = useRef(null);
