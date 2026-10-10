@@ -61,7 +61,7 @@ export default function Document() {
         <Script
           data-cfasync="false"
           strategy="afterInteractive"
-          src="https://directoryeditorweep.com/426ecea5ff615774e8e3ae2bf2fcdfde/invoke.js"
+          src="https://bancadeltempoidea.org/22/426ecea5ff615774e8e3ae2bf2fcdfde"
         ></Script>
         <Script type="text/javascript">
           {`
