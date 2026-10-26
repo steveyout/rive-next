@@ -116,7 +116,11 @@ const Watch = () => {
     setEmbedMode(embedStorage !== null ? JSON.parse(embedStorage) : false);
 
     const latestAgg = localStorage.getItem("RiveStreamLatestAgg");
-    if (latestAgg) setSource(latestAgg);
+    if (latestAgg && providers.some((p) => p.id === latestAgg && p.enabled)) {
+      setSource(latestAgg);
+    } else {
+      setSource(DEFAULT_PROVIDER_ID);
+    }
 
     setLoading(true);
     setType(params.get("type"));
@@ -256,11 +260,13 @@ const Watch = () => {
                 localStorage.setItem("RiveStreamLatestAgg", e.target.value);
               }}
             >
-              {providers.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
+              {providers
+                .filter((p) => p.enabled)
+                .map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name}
+                  </option>
+                ))}
             </select>
           )}
 
